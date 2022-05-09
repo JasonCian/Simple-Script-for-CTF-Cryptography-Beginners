@@ -1,5 +1,5 @@
 # Caesar Cipher
-
+#基础的凯撒加密,解密，以及爆破
 MAX_KEY_SIZE = 26
 
 def getMode():
