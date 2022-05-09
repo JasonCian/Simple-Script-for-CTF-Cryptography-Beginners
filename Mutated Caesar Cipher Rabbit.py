@@ -1,5 +1,5 @@
 # Caesar Cipher Rabbit
-
+# 基于斐波那契数列为偏移码的变异凯撒
 MAX_KEY_SIZE = 26
 
 def getMode():
