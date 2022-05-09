@@ -1,5 +1,5 @@
 # Caesar Cipher --ASCII
-
+# 建立在ASCII编码表里第32位到126位编码的变异凯撒
 MAX_KEY_SIZE = 95
 
 def getMode():
