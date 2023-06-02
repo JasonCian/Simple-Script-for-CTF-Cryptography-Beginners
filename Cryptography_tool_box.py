@@ -6,6 +6,10 @@ import Mutated_Caesar_Cipher_Rabbit
 import base
 import Rail_Fence_Cipher
 import Morse
+
+MAX_KEY_SIZE_1 = 26
+MAX_KEY_SIZE_3 = 95
+
 def GetToolMode():
     print('-------------------------------------------')
     print('请输入你需要使用的加解密工具：')
@@ -17,7 +21,7 @@ def GetToolMode():
     print('(6)MORSE密码的加密和解密')
     print('-------------------------------------------')
     return input()
-    
+
 def GetTool(toolmode):
     if toolmode == '1':
         mode = Caesar_Cipher.getMode()
@@ -28,7 +32,7 @@ def GetTool(toolmode):
         if mode[0] != 'b':
             print(Caesar_Cipher.getTranslatedMessage(mode, message, key))
         else:
-            for key in range(1, MAX_KEY_SIZE + 1):
+            for key in range(1, MAX_KEY_SIZE_1 + 1):
                 print(key, Caesar_Cipher.getTranslatedMessage('decrypt', message, key))
         a = input("-------------------------------------------\n已运行完毕，输入back回到选择界面，\n或输入其他任意字符退出\n-------------------------------------------\n")
         if a == 'back':
@@ -44,7 +48,7 @@ def GetTool(toolmode):
         if mode[0] != 'b':
             print(Mutated_Caesar_Cipher_ASCII.getTranslatedMessage(mode, message, key))
         else:
-            for key in range(1, MAX_KEY_SIZE + 1):
+            for key in range(1, MAX_KEY_SIZE_3 + 1):
                 print(key, Mutated_Caesar_Cipher_ASCII.getTranslatedMessage('decrypt', message, key))
     elif toolmode == '3':
         mode = Mutated_Caesar_Cipher_Rabbit.getMode()
