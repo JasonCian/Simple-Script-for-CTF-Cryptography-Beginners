@@ -11,6 +11,7 @@ MAX_KEY_SIZE_1 = 26
 MAX_KEY_SIZE_3 = 95
 
 def GetToolMode():
+    print('\n')
     print('-------------------------------------------')
     print('请输入你需要使用的加解密工具：')
     print('(1)凯撒加密，解密和爆破')
@@ -20,6 +21,7 @@ def GetToolMode():
     print('(5)栅栏密码的加密和解密')
     print('(6)MORSE密码的加密和解密')
     print('-------------------------------------------')
+    print('\n')
     return input()
 
 def GetTool(toolmode):
